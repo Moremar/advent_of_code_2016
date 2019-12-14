@@ -1,3 +1,9 @@
+# XCode project config files
+*.xcodeproj/
+
+# MacOS specific metadata file
+.DS_Store
+
 # Prerequisites
 *.d
 
