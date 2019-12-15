@@ -2,7 +2,7 @@
 #include <fstream>
 #include <algorithm>
 
-#include "part1.hpp"
+#include "../../day01/part1/part1.hpp"
 #include "../../common/Utils.hpp"
 
 using namespace std;
@@ -25,8 +25,7 @@ int Part1::solve(vector<pair<char, int>> moves) {
         auto facing_itr = find(DIRECTIONS.begin(), DIRECTIONS.end(), facing);
         int facing_index = (int) distance(DIRECTIONS.begin(), facing_itr);
         facing = DIRECTIONS[(facing_index + (move1.first == 'R' ? 1 : -1) + 4) % 4];
-        position = make_pair(position.first + facing.first * move1.second,
-                             position.second + facing.second * move1.second);
+        position = position + facing * move1.second;
     }
     return abs(position.first) + abs(position.second);
 }

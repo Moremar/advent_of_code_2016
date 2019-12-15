@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 
-#include "part1.hpp"
+#include "../../day01/part1/part1.hpp"
 
 using namespace std;
 

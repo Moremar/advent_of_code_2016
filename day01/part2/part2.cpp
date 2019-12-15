@@ -3,8 +3,9 @@
 #include <algorithm>    // transform
 #include <stdexcept>    // exception
 
-#include "part1.hpp"
-#include "part2.hpp"
+#include "../../day01/part1/part1.hpp"
+#include "../../day01/part2/part2.hpp"
+#include "../../common/Utils.hpp"
 #include "../../common/AdventException.hpp"
 
 using namespace std;
@@ -26,7 +27,7 @@ int Part2::solve(vector<pair<char, int>> moves) {
         for (int i = 0; i < move1.second; ++i) {
             // process all points in the move 1 by 1 to add them in the "seen" vector
             seen.push_back(position);
-            position = make_pair(position.first + facing.first, position.second + facing.second);
+            position = position + facing;
             if (find(seen.begin(), seen.end(), position) != seen.end()) {
                 return abs(position.first) + abs(position.second);
             }
