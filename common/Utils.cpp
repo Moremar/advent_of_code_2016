@@ -24,13 +24,30 @@ vector<string> split(const string &s, const string &delim) {
     vector<string> res;
     string rest = s;
     int pos = (int) rest.find(delim);
-    while (pos > 0) {
+    while (pos >= 0) {
         res.push_back(rest.substr(0, pos));
         rest = rest.substr(pos + delim.size());
         pos = (int) rest.find(delim);
     }
     res.push_back(rest.substr(0, pos));  // last part of the string
     return res;
+}
+
+
+string ltrim(const string& str, const string& chars = "\t\n\v\f\r ") {
+    string res(str);
+    res.erase(0, res.find_first_not_of(chars));
+    return res;
+}
+
+string rtrim(const string& str, const string& chars = "\t\n\v\f\r ") {
+    string res(str);
+    res.erase(res.find_last_not_of(chars) + 1);
+    return res;
+}
+
+string trim(const string& str, const string& chars) {
+    return ltrim(rtrim(str, chars), chars);
 }
 
 vector<string> getFileLines(const string &fileName) {

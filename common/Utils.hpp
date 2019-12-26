@@ -19,6 +19,10 @@ string operator +(const string &s, const char &c);
  */
 string operator +(const string &s, const string &s2);
 
+/**
+ * Trim a string
+ */
+string trim(const string& str, const string& chars = "\t\n\v\f\r ");
 
 /**
  * Split a string on a delimiter
