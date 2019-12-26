@@ -1,5 +1,5 @@
-#ifndef part2_h
-#define part2_h
+#ifndef day02_part2_h
+#define day02_part2_h
 
 #include <string>
 #include <vector>
