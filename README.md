@@ -12,5 +12,5 @@ When creating a new day, we need to :
     - create a main.cpp (copy an existing and change the date of the data file)
     - create partX.hpp and partX.cpp
 - for each part, create an Xcode target (File > New > Target)
-- set the working directory to the top of the poject (Product > Scheme > Edit) so the data file can be read
+- set the working directory to the top of the project (Product > Scheme > Edit) so the data file can be read
 - Ensure each required cpp file is ticked in "Target Membership" frame (usually common/Utils.cpp and partX.cpp)
