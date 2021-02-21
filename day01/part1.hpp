@@ -1,5 +1,4 @@
-#ifndef day01_part1_h
-#define day01_part1_h
+#pragma once
 
 #include <string>
 #include <vector>
@@ -17,12 +16,11 @@ const vector<pair<int, int>> DIRECTIONS {
     make_pair(-1, 0)        // WEST
 };
 
-// parse day 1 input
-vector<pair<char, int>> parse(const string &fileName);
 
-namespace Part1 {
+namespace Part1 {  
+    // parse day 1 input
+    vector<pair<char, int>> parse(const string &fileName);
+
     // Solve day 1 part 1
     int solve(vector<pair<char, int>> moves);
 }
-
-#endif /* day01_part1_h */

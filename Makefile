@@ -9,14 +9,15 @@ CFLAGS  = -W -Wall -Wextra -pedantic -g -Icommon -std=c++11
 # The build targets are the executable for each day
 TARGETS = bin/day01.bin \
           bin/day02.bin \
-          bin/day03.bin
+          bin/day03.bin \
+          bin/day04.bin
 
 # When running "make", build the executable for each day
 all: $(TARGETS)
 
 # Artificial targets that always need to be re-executed when called
 # When running "make day01" it will always execute that executable
-.PHONY: day01 day02 day03
+.PHONY: day01 day02 day03 day04
 
 day01: bin/day01.bin
 	./$<
@@ -25,6 +26,9 @@ day02: bin/day02.bin
 	./$<
 
 day03: bin/day03.bin
+	./$<
+
+day04: bin/day04.bin
 	./$<
 
 # Create the executable for a given day

@@ -1,5 +1,4 @@
 #include <iostream>
-#include <fstream>
 #include <algorithm>
 
 #include "part1.hpp"
@@ -8,7 +7,7 @@
 using namespace std;
 
 
-vector<pair<char, int>> parse(const string &fileName) {
+vector<pair<char, int>> Part1::parse(const string &fileName) {
     string line = getFileLines(fileName)[0];
     vector<pair<char, int>> moves;
     for (const string &token : split(line, ", ")) {

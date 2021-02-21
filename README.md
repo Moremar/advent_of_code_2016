@@ -12,8 +12,8 @@ make clean    # remove all executables
 
 # Old structure using XCode
 
-The code was originally organized with a XCode structure so it can be built and from XCode.  
-The structure was updated to build with a Makefile, so it is lighter and no longer relies on XCode.  
+The code was originally organized with a XCode structure so it can be built and executed from XCode.  
+The structure was updated to use a Makefile instead, so it is lighter and no longer relies on XCode.  
 This section is just kept here only as a memo to know how to use setup a C++ project to build with XCode.
 
 ### XCode tree structure

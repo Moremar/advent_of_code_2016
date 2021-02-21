@@ -1,5 +1,4 @@
-#ifndef day01_part2_h
-#define day01_part2_h
+#pragma once
 
 #include <string>
 #include <vector>
@@ -12,5 +11,3 @@ namespace Part2 {
     // Solve day 1 part 2
     int solve(vector<pair<char, int>> moves);
 }
-
-#endif /* day01_part2_h */
