@@ -1,9 +1,7 @@
-#include <iostream>
+#include "Utils.hpp"
 
-#include "../../day03/part1/part1.hpp"
-#include "../../day03/part2/part2.hpp"
-
-#include "../../common/Utils.hpp"
+#include "part1.hpp"
+#include "part2.hpp"
 
 using namespace std;
 

@@ -20,4 +20,4 @@ namespace Part1 {
     void next_position(const char& c, pair<int, int> &coords);
 }
 
-#endif /* part1_h */
+#endif /* day02_part1_h */

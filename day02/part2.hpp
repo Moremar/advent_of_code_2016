@@ -8,17 +8,15 @@
 using std::string;
 using std::vector;
 using std::pair;
-using std::make_pair;
-using std::map;
 
 
 namespace Part2 {
 
-    // Solve the part 2 of day 02
+    // Solve day 2 part 2
     string solve(vector<vector<char>> directions);
 
     // update the coords according to the given direction char
     void next_position(const char& c, pair<int, int> &coords);
 }
 
-#endif /* part2_h */
+#endif /* day02_part2_h */

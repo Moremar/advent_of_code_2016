@@ -9,8 +9,8 @@ using std::pair;
 
 
 namespace Part2 {
-    // Solve the part 2 of day 01
+    // Solve day 1 part 2
     int solve(vector<pair<char, int>> moves);
 }
 
-#endif /* part2_h */
+#endif /* day01_part2_h */

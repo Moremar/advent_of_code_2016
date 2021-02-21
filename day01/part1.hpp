@@ -9,7 +9,7 @@ using std::vector;
 using std::pair;
 using std::make_pair;
 
-
+// constant scoped to the compilation unit
 const vector<pair<int, int>> DIRECTIONS {
     make_pair(0, 1),        // NORTH
     make_pair(1, 0),        // EAST
@@ -17,12 +17,12 @@ const vector<pair<int, int>> DIRECTIONS {
     make_pair(-1, 0)        // WEST
 };
 
-// Parse the input file of day 01
+// parse day 1 input
 vector<pair<char, int>> parse(const string &fileName);
 
 namespace Part1 {
-    // Solve the part 1 of day 01
+    // Solve day 1 part 1
     int solve(vector<pair<char, int>> moves);
 }
 
-#endif /* part1_h */
+#endif /* day01_part1_h */

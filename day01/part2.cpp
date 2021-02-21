@@ -1,12 +1,11 @@
-#include <iostream>
-#include <fstream>      // ifstream
 #include <algorithm>    // transform
 #include <stdexcept>    // exception
+#include <set>
 
-#include "../../day01/part1/part1.hpp"
-#include "../../day01/part2/part2.hpp"
-#include "../../common/Utils.hpp"
-#include "../../common/AdventException.hpp"
+#include "part1.hpp"
+#include "part2.hpp"
+#include "Utils.hpp"
+#include "AdventException.hpp"
 
 using namespace std;
 
@@ -14,21 +13,17 @@ using namespace std;
 int Part2::solve(vector<pair<char, int>> moves) {
     pair<int, int> position = make_pair(0, 0);
     pair<int, int> facing = DIRECTIONS[0];  // start facing NORTH
-    vector<pair<int, int>> seen;
-    bool found = false;
+    set<pair<int, int>> seen;
 
-    for(auto move1 : moves) {
-        if (found) {
-            break;
-        }
+    for(const auto &move : moves) {
         auto facing_itr = find(DIRECTIONS.begin(), DIRECTIONS.end(), facing);
         int facing_index = (int) distance(DIRECTIONS.begin(), facing_itr);
-        facing = DIRECTIONS[(facing_index + (move1.first == 'R' ? 1 : -1) + 4) % 4];
-        for (int i = 0; i < move1.second; ++i) {
+        facing = DIRECTIONS[(facing_index + (move.first == 'R' ? 1 : -1) + 4) % 4];
+        for (int i = 0; i < move.second; ++i) {
             // process all points in the move 1 by 1 to add them in the "seen" vector
-            seen.push_back(position);
+            seen.insert(position);
             position = position + facing;
-            if (find(seen.begin(), seen.end(), position) != seen.end()) {
+            if (seen.find(position) != seen.end()) {
                 return abs(position.first) + abs(position.second);
             }
         }

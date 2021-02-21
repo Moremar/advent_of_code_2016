@@ -1,9 +1,9 @@
 #include <iostream>
 #include <fstream>
 
-#include "../../day02/part1/part1.hpp"
-#include "../../common/Utils.hpp"
-#include "../../common/AdventException.hpp"
+#include "part1.hpp"
+#include "Utils.hpp"
+#include "AdventException.hpp"
 
 using namespace std;
 

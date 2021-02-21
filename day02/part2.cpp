@@ -1,9 +1,9 @@
 #include <iostream>
 #include <fstream>
 
-#include "../../day02/part1/part1.hpp"
-#include "../../day02/part2/part2.hpp"
-#include "../../common/AdventException.hpp"
+#include "part1.hpp"
+#include "part2.hpp"
+#include "AdventException.hpp"
 
 using namespace std;
 
@@ -17,10 +17,7 @@ map<pair<int, int>, string> KEYPAD {
 };
 
 bool in_keypad(const pair<int, int> &position) {
-    for (pair<pair<int, int>, string> key: KEYPAD) {
-        if (key.first == position) return true;
-    }
-    return false;
+    return KEYPAD.find(position) != KEYPAD.end();
 }
 
 void Part2::next_position(const char& c, pair<int, int> &coords) {
@@ -43,7 +40,7 @@ void Part2::next_position(const char& c, pair<int, int> &coords) {
 }
 
 string Part2::solve(vector<vector<char>> directions) {
-    pair<int, int> coords = make_pair(1, 1);
+    pair<int, int> coords = make_pair(0, 2);
     string code;
     for(const vector<char> &dirLine : directions) {
         for (const char &c: dirLine) {
