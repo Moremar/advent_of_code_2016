@@ -10,14 +10,15 @@ CFLAGS  = -W -Wall -Wextra -pedantic -g -Icommon -std=c++11
 TARGETS = bin/day01.bin \
           bin/day02.bin \
           bin/day03.bin \
-          bin/day04.bin
+          bin/day04.bin \
+		  bin/day05.bin
 
 # When running "make", build the executable for each day
 all: $(TARGETS)
 
 # Artificial targets that always need to be re-executed when called
 # When running "make day01" it will always execute that executable
-.PHONY: day01 day02 day03 day04
+.PHONY: day01 day02 day03 day04 day05
 
 day01: bin/day01.bin
 	./$<
@@ -31,8 +32,11 @@ day03: bin/day03.bin
 day04: bin/day04.bin
 	./$<
 
+day05: bin/day05.bin
+	./$<
+
 # Create the executable for a given day
-bin/%.bin: %/part1.o %/part2.o %/main.o common/Utils.o
+bin/%.bin: %/part1.o %/part2.o %/main.o common/Utils.o common/md5.o
 	$(CC) $(CFLAGS) -o $@ $^
 
 # Create any .o file from its cpp file
