@@ -30,6 +30,11 @@ string trim(const string& str, const string& chars = "\t\n\v\f\r ");
 vector<string> split(const string &s, const string &delim);
 
 /**
+ * Remove all occurences of a substring from a string
+ */
+string removeSubstr(const string &s, const string &substring);
+
+/**
  * Get a vector of all not-empty lines of a file
  */
 vector<string> getFileLines(const string &fileName);

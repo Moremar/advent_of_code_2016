@@ -49,6 +49,16 @@ string trim(const string& str, const string& chars) {
     return ltrim(rtrim(str, chars), chars);
 }
 
+string removeSubstr(const string &s, const string &substring) {
+    const auto nextPos = s.find(substring);
+    if (nextPos == string::npos) {
+        return s;
+    }
+    string updated = s;
+    updated.erase(nextPos, substring.length());
+    return removeSubstr(updated, substring);
+}
+
 vector<string> getFileLines(const string &fileName) {
     vector<string> res;
     ifstream f(fileName);
