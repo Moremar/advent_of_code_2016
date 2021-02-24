@@ -1,20 +1,12 @@
 #pragma once
-#include <string>
-#include <map>
-#include <tuple>
-#include <set>
-
-using std::string;
-using std::pair;
-using std::map;
-using std::set;
-using std::tuple;
+#include "Utils.hpp"
 
 
 class World {
 public:
     World(int magicKey);
     bool isFree(const pair<int, int> &pair);
+
 private:
     int myMagicKey;
     map<pair<int, int>, bool> myWorld;

@@ -1,13 +1,5 @@
 #pragma once
-#include <string>
-#include <map>
-#include <set>
-#include <vector>
-
-using std::string;
-using std::map;
-using std::set;
-using std::vector;
+#include "Utils.hpp"
 
 
 struct Instruction {

@@ -1,8 +1,5 @@
 #pragma once
-#include <string>
-
-using std::string;
-using std::vector;
+#include "Utils.hpp"
 
 
 namespace Part1 {

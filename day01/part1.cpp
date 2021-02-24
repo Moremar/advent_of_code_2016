@@ -1,8 +1,4 @@
-#include <iostream>
-#include <algorithm>
-
 #include "part1.hpp"
-#include "../common/Utils.hpp"
 
 using namespace std;
 

@@ -1,12 +1,8 @@
-#include <sstream>
-#include <regex>
-#include <iostream>
-#include <numeric>   // for std::accumulate
-#include <vector>
 #include "part1.hpp"
 #include "part2.hpp"
 
 using namespace std;
+
 
 /**
  * In part 2, the decompressed word has above 10 billion characters, so trying to generate

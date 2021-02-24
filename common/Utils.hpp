@@ -1,13 +1,32 @@
-#ifndef Utils_hpp
-#define Utils_hpp
+#pragma once
 
+// include headers or data structures used across all puzzles
+#include <algorithm>
 #include <iostream>
+#include <list>
+#include <map>
+#include <numeric>   // std::accumulate
+#include <regex>
+#include <set>
+#include <sstream>   // ostringstream
 #include <string>
+#include <tuple>
+#include <utility>  // operations on pairs
 #include <vector>
 
-using std::string;
-using std::vector;
+#include "AdventException.hpp"
+#include "md5.hpp"
+
+using std::list;
+using std::map;
+using std::multiset;
+using std::make_pair;
 using std::pair;
+using std::set;
+using std::string;
+using std::tuple;
+using std::vector;
+
 
 /**
  * Concatenate a string and a char
@@ -57,6 +76,3 @@ template<class T, class U>
 bool in(vector<T> v, T e) {
     return find(v.begin(), v.end(), e) == v.end();
 }
-
-
-#endif /* Utils_hpp */

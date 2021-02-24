@@ -1,15 +1,12 @@
-#include <algorithm>
-#include <regex>
-#include <numeric>
-
 #include "part1.hpp"
-#include "Utils.hpp"
 
 using namespace std;
+
 
 Monitor::Monitor() {
     myScreen = vector<vector<char>>(6, vector<char>(50, ' '));
 }
+
 
 void Monitor::execute(const Instruction &instruction) {
     if (instruction.type == "rect") {
@@ -38,6 +35,7 @@ void Monitor::execute(const Instruction &instruction) {
         }
     }
 }
+
 
 int Monitor::countPixels() const {
     int count = 0;

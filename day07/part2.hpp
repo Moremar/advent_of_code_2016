@@ -1,7 +1,5 @@
 #pragma once
-#include <vector>
-
-using std::vector;
+#include "part1.hpp"
 
 
 namespace Part2 {

@@ -1,9 +1,5 @@
 #pragma once
-#include <string>
-#include <vector>
-
-using std::string;
-using std::vector;
+#include "Utils.hpp"
 
 
 struct Instruction {
@@ -23,6 +19,7 @@ public:
 private:
     vector<vector<char>> myScreen;
 };
+
 
 namespace Part1 {
     vector<Instruction> parse(const string &filePath);

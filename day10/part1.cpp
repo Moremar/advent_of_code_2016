@@ -1,9 +1,4 @@
-#include <regex>
-#include <list>
-
 #include "part1.hpp"
-#include "Utils.hpp"
-#include "AdventException.hpp"
 
 using namespace std;
 

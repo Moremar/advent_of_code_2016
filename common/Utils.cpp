@@ -1,6 +1,4 @@
 #include <fstream>
-#include <sstream>    // ostringstream
-
 #include "Utils.hpp"
 #include "AdventException.hpp"
 

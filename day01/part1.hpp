@@ -1,12 +1,6 @@
 #pragma once
+#include "Utils.hpp"
 
-#include <string>
-#include <vector>
-
-using std::string;
-using std::vector;
-using std::pair;
-using std::make_pair;
 
 // constant scoped to the compilation unit
 const vector<pair<int, int>> DIRECTIONS {
@@ -18,9 +12,6 @@ const vector<pair<int, int>> DIRECTIONS {
 
 
 namespace Part1 {  
-    // parse day 1 input
     vector<pair<char, int>> parse(const string &fileName);
-
-    // Solve day 1 part 1
     int solve(vector<pair<char, int>> moves);
 }

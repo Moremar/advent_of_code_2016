@@ -1,9 +1,4 @@
-#include <iostream>
-#include <fstream>
-
 #include "part1.hpp"
-#include "Utils.hpp"
-#include "AdventException.hpp"
 
 using namespace std;
 
@@ -12,6 +7,7 @@ using namespace std;
 int get_digit(const pair<int, int> &coords) {
     return coords.second * 3 + (coords.first + 1);
 }
+
 
 void Part1::next_position(const char& c, pair<int, int> &coords) {
     switch (c) {
@@ -32,6 +28,7 @@ void Part1::next_position(const char& c, pair<int, int> &coords) {
     }
 }
 
+
 int Part1::solve(vector<vector<char>> directions) {
     pair<int, int> coords = make_pair(1, 1);
     int code = 0;
@@ -44,7 +41,8 @@ int Part1::solve(vector<vector<char>> directions) {
     return code;
 }
 
-vector<vector<char>> parse(const string &fileName) {
+
+vector<vector<char>> Part1::parse(const string &fileName) {
     vector<vector<char>> directions;
     for(string line : getFileLines(fileName)) {
         vector<char> directionLine;

@@ -1,11 +1,5 @@
 #pragma once
-
-#include <map>
-#include <vector>
-
-using std::string;
-using std::vector;
-using std::map;
+#include "Utils.hpp"
 
 
 namespace Part1 {

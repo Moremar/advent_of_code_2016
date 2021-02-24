@@ -1,9 +1,5 @@
 #include "part1.hpp"
 
-#include <algorithm>
-#include <map>
-#include <regex>
-
 using namespace std;
 
 

@@ -1,10 +1,5 @@
 #pragma once
-
-#include <string>
-#include <vector>
-
-using std::string;
-using std::vector;
+#include "Utils.hpp"
 
 
 namespace Part2 {
