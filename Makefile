@@ -4,7 +4,7 @@
 
 
 CC = g++
-CFLAGS  = -W -Wall -Wextra -pedantic -g -Icommon -std=c++11
+CFLAGS  = -W -Wall -Wextra -pedantic -g -Icommon -std=c++2a
  
 # The build targets are the executable for each day
 TARGETS = bin/day01.bin \
@@ -19,14 +19,16 @@ TARGETS = bin/day01.bin \
 		  bin/day10.bin \
 		  bin/day11.bin \
 		  bin/day12.bin \
-		  bin/day13.bin
+		  bin/day13.bin \
+		  bin/day14.bin
 
 # When running "make", build the executable for each day
 all: $(TARGETS)
 
 # Artificial targets that always need to be re-executed when called
 # When running "make day01" it will always execute that executable
-.PHONY: day01 day02 day03 day04 day05 day06 day07 day08 day09 day10 day11 day12 day13
+.PHONY: day01 day02 day03 day04 day05 day06 day07 day08 day09 day10 day11 day12 day13 \
+        day14
 
 day01: bin/day01.bin
 	./$<
@@ -65,6 +67,9 @@ day12: bin/day12.bin
 	./$<
 
 day13: bin/day13.bin
+	./$<
+
+day14: bin/day14.bin
 	./$<
 
 # Create the executable for a given day
