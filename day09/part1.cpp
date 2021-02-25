@@ -18,8 +18,8 @@ string Part1::decompress(const string &compressed) {
         const string marker = compressed.substr(pos, markerSize);
         smatch match;
         regex_search(marker.begin(), marker.end(), match, rgx);
-        const size_t repeatChars = stoi(match[1]);
-        const size_t repeatTimes = stoi(match[2]);
+        const size_t repeatChars = stoul(match[1]);
+        const size_t repeatTimes = stoul(match[2]);
         const string repeatSeq = compressed.substr(pos + markerSize, repeatChars);
         // add the repeated sequence to the result
         for (size_t i = 0; i < repeatTimes; i++) {

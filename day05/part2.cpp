@@ -13,7 +13,7 @@ string Part2::solve(const string &doorId) {
         const auto hash = md5(doorId + to_string(index));
         if (hash.substr(0, 5) == "00000") {
             if (validIndexVals.find(hash[5]) != string::npos) {
-                int pos = hash[5] - '0';
+                size_t pos = static_cast<size_t>(hash[5] - '0');
                 if (password[pos] == ' ') {
                     password[pos] = hash[6];
                     resolved++;

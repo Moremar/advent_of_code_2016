@@ -22,7 +22,7 @@ private:
     vector<int> myRegisters;
 
     // convert register name to ID ("a" -> 0)
-    static int registerId(const string &registerName);
+    static size_t registerId(const string &registerName);
 };
 
 

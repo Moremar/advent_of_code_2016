@@ -10,25 +10,25 @@ Monitor::Monitor() {
 
 void Monitor::execute(const Instruction &instruction) {
     if (instruction.type == "rect") {
-        for (int row = 0; row < instruction.b; ++row) {
-            for (int col = 0; col < instruction.a; ++col) {
+        for (size_t row = 0; row < instruction.b; ++row) {
+            for (size_t col = 0; col < instruction.a; ++col) {
                 myScreen[row][col] = '#';
             }
         }
     } else if (instruction.type == "column") {
-        const int col = instruction.a;
-        for (int step=0; step < instruction.b; step++) {
+        const size_t col = instruction.a;
+        for (size_t step=0; step < instruction.b; step++) {
             int tmp = myScreen[5][col];
-            for (int row=5; row>0; row--) {
+            for (size_t row=5; row>0; row--) {
                 myScreen[row][col] = myScreen[row-1][col];
             }
             myScreen[0][col] = tmp;
         }
     } else {
-        for (int step = 0; step < instruction.b; step++) {
-            const int row = instruction.a;
+        for (size_t step = 0; step < instruction.b; step++) {
+            const size_t row = instruction.a;
             int tmp = myScreen[row][49];
-            for (int col=49; col>0; col--) {
+            for (size_t col=49; col>0; col--) {
                 myScreen[row][col] = myScreen[row][col-1];
             }
             myScreen[row][0] = tmp;

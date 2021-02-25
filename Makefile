@@ -4,7 +4,15 @@
 
 
 CC = g++
-CFLAGS  = -W -Wall -Wextra -pedantic -g -Icommon -std=c++2a
+
+# -Wall              # activate some waning flags
+# -Wextra            # activate some additional warning flags
+# -Werror            # treat all warnings as errors
+# -Wsign-conversion  # check implicit signed/unsigned conversion
+# -pedantic          # reject all compiler extensions (compiler-specific not in C++ standard)
+# -Ixxx              # use xxx as a header folder
+# -std=c++2a         # use C++20 standard
+CFLAGS  = -W -Wall -Wextra -Werror -pedantic -Wsign-conversion -g -Icommon -std=c++2a
  
 # The build targets are the executable for each day
 TARGETS = bin/day01.bin \

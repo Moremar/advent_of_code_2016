@@ -16,7 +16,7 @@ vector<Disc> Part1::parse(const string &fileName) {
 }
 
 
-int Part1::solve(const vector<Disc> &discs) {
+size_t Part1::solve(const vector<Disc> &discs) {
     size_t time = 0;
     bool pass;
     while (true) {

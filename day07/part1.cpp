@@ -27,8 +27,8 @@ IPv7::IPv7(const string &str) {
 
 bool IPv7::supportTLS() const {
     auto hasABBA = [](const string &seq) {
-        int pos = 0;
-        while (pos + 3 < (int)seq.size()) {
+        size_t pos = 0;
+        while (pos + 3 < seq.size()) {
             if (seq.at(pos) == seq.at(pos+3)      // external pair
              && seq.at(pos+1) == seq.at(pos+2)    // internal pair
              && seq.at(pos) != seq.at(pos+1)) {   // the 2 pairs are different chars

@@ -12,8 +12,8 @@ vector<map<char, int>> Part1::getFreqs(const vector<string> &signals) {
     vector<map<char, int>> freqs;
     // count the number of occurences of each letter at each position
     for (const string &signal : signals) {        
-        for (int i = 0; i < (int)signal.size(); i++) {
-            if ((int)freqs.size() <= i) {
+        for (size_t i = 0; i < signal.size(); i++) {
+            if (freqs.size() <= i) {
                 freqs.push_back(map<char, int>());
             }
             const char c = signal[i];

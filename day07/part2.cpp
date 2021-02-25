@@ -7,8 +7,8 @@ bool IPv7::supportSSL(
 ) const {
     auto getABAs = [](const string &seq) {
         vector<string> abas;
-        int pos = 0;
-        while (pos + 2 < (int)seq.size()) {
+        size_t pos = 0;
+        while (pos + 2 < seq.size()) {
             if (seq.at(pos) == seq.at(pos+2)      // external pair
              && seq.at(pos) != seq.at(pos+1)) {   // the 2 pairs are different chars
                 abas.push_back(seq.substr(pos, 3));

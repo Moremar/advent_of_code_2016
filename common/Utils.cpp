@@ -20,11 +20,11 @@ std::string operator +(const std::string &s, const string &s2) {
 vector<string> split(const string &s, const string &delim) {
     vector<string> res;
     string rest = s;
-    int pos = (int) rest.find(delim);
-    while (pos >= 0) {
+    size_t pos = rest.find(delim);
+    while (pos != string::npos) {
         res.push_back(rest.substr(0, pos));
         rest = rest.substr(pos + delim.size());
-        pos = (int) rest.find(delim);
+        pos = rest.find(delim);
     }
     res.push_back(rest.substr(0, pos));  // last part of the string
     return res;

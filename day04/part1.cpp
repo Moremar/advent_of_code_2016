@@ -23,7 +23,7 @@ bool Room::isReal() const {
     });
     // ensure the first 5 letters are the checksum
     string top5;
-    for (int i = 0; i < 5; i++) {
+    for (size_t i = 0; i < 5; i++) {
         top5 += toSort[i].first;
     }
     return top5 == checksum;

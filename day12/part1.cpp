@@ -8,8 +8,8 @@ Assembunny::Assembunny(const vector<Instruction> &instructions): myInstructions(
 };
 
 
-int Assembunny::registerId(const string &registerName) {
-    return registerName[0] - 'a';
+size_t Assembunny::registerId(const string &registerName) {
+    return static_cast<size_t>(registerName[0] - 'a');
 }
 
 
@@ -34,7 +34,7 @@ void Assembunny::runInstruction(const Instruction &instr) {
     if (instr.cmd == "jnz") {
         const bool useRegistry = string("abcd").find(instr.x) != string::npos;
         const int val = useRegistry ? myRegisters[registerId(instr.x)] : stoi(instr.x);
-        myPos += (val != 0) ? stoi(instr.y) : 1;
+        myPos += (val != 0) ? stoul(instr.y) : 1;
         return;
     }
 }

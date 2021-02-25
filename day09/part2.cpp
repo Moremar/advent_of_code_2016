@@ -9,12 +9,12 @@ using namespace std;
  * it takes forever.
  * Instead, we go through the letters of the compressed file and calculate how many times
  * each one will appear in the decompressed file.
- * EAch letter starts with a score of 1, and this score is multiplied every time a marker 
+ * Each letter starts with a score of 1, and this score is multiplied every time a marker 
  * including that letter is found.
  */
 
 size_t countLetters(const string &compressed) {
-    vector<size_t> occurences = vector<size_t>((int)compressed.size(), 1);
+    auto occurences = vector<size_t>(compressed.size(), 1);
     size_t pos = 0;
     regex rgx("\\(([0-9]+)x([0-9]+)\\)");
     while(pos < compressed.size()) {
@@ -27,8 +27,8 @@ size_t countLetters(const string &compressed) {
         const string marker = compressed.substr(pos, markerSize);
         smatch match;
         regex_search(marker.begin(), marker.end(), match, rgx);
-        const size_t repeatChars = stoi(match[1]);
-        const size_t repeatTimes = stoi(match[2]);
+        const size_t repeatChars = stoul(match[1]);
+        const size_t repeatTimes = stoul(match[2]);
         // multiply occurences of all letters in the repeated block
         for (size_t i = 0; i < repeatChars; ++i) {
             occurences[pos + markerSize + i] *= repeatTimes;

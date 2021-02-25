@@ -3,5 +3,5 @@
 
 
 namespace Part2 {
-    int solve(const vector<Disc> &moves);
+    size_t solve(const vector<Disc> &discs);
 }

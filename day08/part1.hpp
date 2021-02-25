@@ -3,9 +3,9 @@
 
 
 struct Instruction {
-    Instruction(const string &type, int a, int b): type(type), a(a), b(b) {};
+    Instruction(const string &type, size_t a, size_t b): type(type), a(a), b(b) {};
     string type;    // rect | row | column
-    int a, b;
+    size_t a, b;
 };
 
 

@@ -4,10 +4,10 @@
 
 struct Room {
     string encryptedName;
-    int sectorId;
+    size_t sectorId;
     string checksum;
 
-    Room(const string &encryptedName, int sectorId, const string &checksum):
+    Room(const string &encryptedName, size_t sectorId, const string &checksum):
         encryptedName(encryptedName), sectorId(sectorId), checksum(checksum) {}
     
     bool isReal() const;

@@ -41,7 +41,7 @@ State Part1::parse(const string &fileName) {
     State state;
     map<string, int> chips, generators;
     const auto lines = getFileLines(fileName);
-    for (int i = 0; i < 4; ++i) {
+    for (size_t i = 0; i < 4; ++i) {
         string line = lines[i];
         if (line.find("nothing") != string::npos)
             continue;
