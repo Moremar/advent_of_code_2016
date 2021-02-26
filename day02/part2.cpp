@@ -4,19 +4,19 @@
 using namespace std;
 
 
-map<pair<int, int>, string> KEYPAD {
-    {make_pair(2, 0), "1"}, {make_pair(1, 1), "2"}, {make_pair(2, 1), "3"},
-    {make_pair(3, 1), "4"}, {make_pair(0, 2), "5"}, {make_pair(1, 2), "6"},
-    {make_pair(2, 2), "7"}, {make_pair(3, 2), "8"}, {make_pair(4, 2), "9"},
-    {make_pair(1, 3), "A"}, {make_pair(2, 3), "B"}, {make_pair(3, 3), "C"},
-    {make_pair(2, 4), "D"}
+map<Coordinates, string> KEYPAD {
+    { {2, 0}, "1" }, { {1, 1}, "2" }, { {2, 1}, "3" },
+    { {3, 1}, "4" }, { {0, 2}, "5" }, { {1, 2}, "6" },
+    { {2, 2}, "7" }, { {3, 2}, "8" }, { {4, 2}, "9" },
+    { {1, 3}, "A" }, { {2, 3}, "B" }, { {3, 3}, "C" },
+    { {2, 4}, "D" }
 };
 
-bool in_keypad(const pair<int, int> &position) {
+bool in_keypad(const Coordinates &position) {
     return KEYPAD.find(position) != KEYPAD.end();
 }
 
-void Part2::next_position(const char& c, pair<int, int> &coords) {
+void Part2::next_position(const char& c, Coordinates &coords) {
     switch (c) {
         case 'U':
             if (in_keypad(make_pair(coords.first, coords.second - 1))) coords.second--;
@@ -36,7 +36,7 @@ void Part2::next_position(const char& c, pair<int, int> &coords) {
 }
 
 string Part2::solve(vector<vector<char>> directions) {
-    pair<int, int> coords = make_pair(0, 2);
+    Coordinates coords(0, 2);
     string code;
     for(const vector<char> &dirLine : directions) {
         for (const char &c: dirLine) {

@@ -13,8 +13,8 @@ vector<pair<char, int>> Part1::parse(const string &fileName) {
 }
 
 int Part1::solve(const vector<pair<char, int>> &moves) {
-    pair<int, int> position = make_pair(0, 0);
-    pair<int, int> facing = DIRECTIONS[0];  // start facing NORTH
+    Coordinates position(0, 0);
+    Coordinates facing = DIRECTIONS[0];  // start facing NORTH
 
     for(const auto &move : moves) {
         auto facing_itr = find(DIRECTIONS.begin(), DIRECTIONS.end(), facing);

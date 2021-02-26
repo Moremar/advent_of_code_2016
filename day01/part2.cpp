@@ -5,9 +5,9 @@ using namespace std;
 
 
 int Part2::solve(const vector<pair<char, int>> &moves) {
-    pair<int, int> position = make_pair(0, 0);
-    pair<int, int> facing = DIRECTIONS[0];  // start facing NORTH
-    set<pair<int, int>> seen;
+    Coordinates position(0, 0);
+    Coordinates facing = DIRECTIONS[0];  // start facing NORTH
+    set<Coordinates> seen;
 
     for(const auto &move : moves) {
         auto facing_itr = find(DIRECTIONS.begin(), DIRECTIONS.end(), facing);

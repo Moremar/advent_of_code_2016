@@ -5,7 +5,7 @@
 struct State {
     int moves = 0;
     int floor = 1;
-    multiset<pair<int, int>> pairs;  // floor of chip + generator
+    multiset<Coordinates> pairs;  // floor of chip + generator
     bool isValid() const;
     bool operator==(const State &state) const;
     bool operator<(const State &state) const;

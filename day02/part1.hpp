@@ -5,5 +5,5 @@
 namespace Part1 {
     vector<vector<char>> parse(const string &fileName);
     int solve(vector<vector<char>> directions);
-    void next_position(const char& c, pair<int, int> &coords);
+    void next_position(const char& c, Coordinates &coords);
 }

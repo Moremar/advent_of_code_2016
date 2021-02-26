@@ -7,8 +7,8 @@ using namespace std;
 int Part2::solve(const tuple<int, int, int> &input) {
     World world(get<0>(input));
     const int maxDist = 50;
-    set<pair<int, int>> seen;
-    list<pair<int, pair<int, int>>> toCheck = { {0, {1, 1}} }; // distance so far + (x, y)
+    set<Coordinates> seen;
+    list<pair<int, Coordinates>> toCheck = { {0, {1, 1}} }; // distance so far + (x, y)
 
     while (toCheck.size() > 0) {
         const auto curr = toCheck.front();

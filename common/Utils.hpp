@@ -27,6 +27,7 @@ using std::string;
 using std::tuple;
 using std::vector;
 
+using Coordinates = pair<int, int>;
 
 /**
  * Concatenate a string and a char
@@ -61,12 +62,12 @@ vector<string> getFileLines(const string &fileName);
 /**
  * Term by term sum of 2 pairs of int
  */
-pair<int, int> operator +(const pair<int, int> &x, const pair<int, int> &y);
+Coordinates operator +(const Coordinates &x, const Coordinates &y);
 
 /**
  * multiply both terms of a pair by an int
  */
-pair<int, int> operator *(const pair<int, int> &x, int i);
+Coordinates operator *(const Coordinates &x, int i);
 
 
 /**

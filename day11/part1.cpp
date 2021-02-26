@@ -71,7 +71,7 @@ set<State> getNextCandidates(const State &curr) {
 
     // move a single pair (one or both items of the pair)
     for (const auto &pair1 : curr.pairs) {
-        set<pair<int, int>> potentialNextPairs;
+        set<Coordinates> potentialNextPairs;
         if (pair1.first == curr.floor) {
             potentialNextPairs.insert({ pair1.first + 1, pair1.second});
             potentialNextPairs.insert({ pair1.first - 1, pair1.second});
@@ -98,7 +98,7 @@ set<State> getNextCandidates(const State &curr) {
 
     // move items from 2 different pairs
     for (const auto &pair1 : curr.pairs) {
-        multiset<pair<int, int>> otherSet(curr.pairs);
+        multiset<Coordinates> otherSet(curr.pairs);
         otherSet.erase(otherSet.find(pair1));
 
         if (pair1.first == curr.floor) {

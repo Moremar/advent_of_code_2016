@@ -9,7 +9,7 @@ World::World(int magicKey): myMagicKey(magicKey) {
 };
 
 
-bool World::isFree(const pair<int, int> &pair) {
+bool World::isFree(const Coordinates &pair) {
     if (pair.first < 0 || pair.second < 0)
         return false;
     if (myWorld.find(pair) == myWorld.end()) {
@@ -37,7 +37,7 @@ tuple<int, int, int> Part1::parse(const string &fileName) {
 }
 
 
-set<pair<int, int>> Part1::getNeighbors(pair<int, int> point) {
+set<Coordinates> Part1::getNeighbors(const Coordinates &point) {
     return {
         make_pair(point.first - 1, point.second),
         make_pair(point.first, point.second - 1),
@@ -49,8 +49,8 @@ set<pair<int, int>> Part1::getNeighbors(pair<int, int> point) {
 int Part1::solve(const tuple<int, int, int> &input) {
     World world(get<0>(input));
     auto target = make_pair(get<1>(input), get<2>(input));
-    set<pair<int, int>> seen;
-    list<pair<int, pair<int, int>>> toCheck = { {0, {1, 1}} }; // distance so far + (x, y)
+    set<Coordinates> seen;
+    list<pair<int, Coordinates>> toCheck = { {0, {1, 1}} }; // distance so far + (x, y)
 
     while (toCheck.size() > 0) {
         const auto curr = toCheck.front();

@@ -4,5 +4,5 @@
 
 namespace Part2 {
     string solve(vector<vector<char>> directions);
-    void next_position(const char& c, pair<int, int> &coords);
+    void next_position(const char& c, Coordinates &coords);
 }

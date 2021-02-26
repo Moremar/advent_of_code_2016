@@ -73,10 +73,10 @@ vector<string> getFileLines(const string &fileName) {
     return res;
 }
 
-pair<int, int> operator +(const pair<int, int> &x, const pair<int, int> &y) {
+Coordinates operator +(const Coordinates &x, const Coordinates &y) {
     return make_pair(x.first + y.first, x.second + y.second);
 }
 
-pair<int, int> operator *(const pair<int, int> &x, int i) {
+Coordinates operator *(const Coordinates &x, int i) {
     return make_pair(x.first * i, x.second * i);
 }

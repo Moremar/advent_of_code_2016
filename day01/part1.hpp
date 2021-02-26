@@ -3,11 +3,11 @@
 
 
 // constant scoped to the compilation unit
-const vector<pair<int, int>> DIRECTIONS {
-    make_pair(0, 1),        // NORTH
-    make_pair(1, 0),        // EAST
-    make_pair(0, -1),       // SOUTH
-    make_pair(-1, 0)        // WEST
+const vector<Coordinates> DIRECTIONS {
+    {  0,  1 },       // NORTH
+    {  1,  0 },       // EAST
+    {  0, -1 },       // SOUTH
+    { -1,  0 }        // WEST
 };
 
 
