@@ -13,5 +13,5 @@ const vector<pair<int, int>> DIRECTIONS {
 
 namespace Part1 {  
     vector<pair<char, int>> parse(const string &fileName);
-    int solve(vector<pair<char, int>> moves);
+    int solve(const vector<pair<char, int>> &moves);
 }

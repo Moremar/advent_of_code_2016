@@ -4,7 +4,7 @@
 using namespace std;
 
 
-int Part2::solve(vector<pair<char, int>> moves) {
+int Part2::solve(const vector<pair<char, int>> &moves) {
     pair<int, int> position = make_pair(0, 0);
     pair<int, int> facing = DIRECTIONS[0];  // start facing NORTH
     set<pair<int, int>> seen;

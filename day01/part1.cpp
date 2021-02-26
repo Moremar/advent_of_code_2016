@@ -12,7 +12,7 @@ vector<pair<char, int>> Part1::parse(const string &fileName) {
     return moves;
 }
 
-int Part1::solve(vector<pair<char, int>> moves) {
+int Part1::solve(const vector<pair<char, int>> &moves) {
     pair<int, int> position = make_pair(0, 0);
     pair<int, int> facing = DIRECTIONS[0];  // start facing NORTH
 

@@ -3,5 +3,5 @@
 
 
 namespace Part2 {
-    int solve(const vector<pair<char, int>> &moves);
+    string solve(const vector<char> &initialKey);
 }
