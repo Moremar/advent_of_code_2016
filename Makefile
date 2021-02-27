@@ -32,7 +32,8 @@ TARGETS = bin/day01.bin \
 		  bin/day15.bin \
 		  bin/day16.bin \
 		  bin/day17.bin \
-		  bin/day18.bin
+		  bin/day18.bin \
+		  bin/day19.bin
 
 # When running "make", build the executable for each day
 all: $(TARGETS)
@@ -40,7 +41,7 @@ all: $(TARGETS)
 # Artificial targets that always need to be re-executed when called
 # When running "make day01" it will always execute that executable
 .PHONY: day01 day02 day03 day04 day05 day06 day07 day08 day09 day10 day11 day12 day13 \
-        day14 day15 day16 day17 day18
+        day14 day15 day16 day17 day18 day19
 
 day01: bin/day01.bin
 	./$<
@@ -94,6 +95,9 @@ day17: bin/day17.bin
 	./$<
 
 day18: bin/day18.bin
+	./$<
+
+day19: bin/day19.bin
 	./$<
 
 # Create the executable for a given day
