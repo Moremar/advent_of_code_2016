@@ -69,6 +69,10 @@ Coordinates operator +(const Coordinates &x, const Coordinates &y);
  */
 Coordinates operator *(const Coordinates &x, int i);
 
+/**
+ * Manhattan distance between 2 points
+ */
+int manhattan(const Coordinates &p1, const Coordinates &p2);
 
 /**
  * Check if an element is included in a vector

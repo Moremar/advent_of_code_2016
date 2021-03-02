@@ -80,3 +80,7 @@ Coordinates operator +(const Coordinates &x, const Coordinates &y) {
 Coordinates operator *(const Coordinates &x, int i) {
     return make_pair(x.first * i, x.second * i);
 }
+
+int manhattan(const Coordinates &p1, const Coordinates &p2) {
+    return abs(p1.first - p2.first) + abs(p1.second - p2.second);
+}
