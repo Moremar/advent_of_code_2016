@@ -9,6 +9,7 @@
 #include <regex>
 #include <set>
 #include <sstream>   // ostringstream
+#include <fstream>   // ofstream
 #include <string>
 #include <tuple>
 #include <utility>  // operations on pairs
